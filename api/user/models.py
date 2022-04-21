@@ -8,6 +8,9 @@ class User(models.Model):
     password=models.CharField(max_length=255, verbose_name="Contraseña")
     status_delete=models.BooleanField(default=False, verbose_name= "Estado")
 
+class Meta: 
+    db_table = "Users"
+
 class Cuentas(models.Model): 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=25, verbose_name='Nombre')
