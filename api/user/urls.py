@@ -6,4 +6,5 @@ urlpatterns = [
 
     path("signUp/", RegisterUser.as_view()),
     path("register/", ListUser.as_view()),
+    #path("account/", )
 ]
